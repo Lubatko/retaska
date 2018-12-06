@@ -17,40 +17,18 @@ class Doprava
     private $id;
 
     /**
-     * @ORM\Column(type="text", nullable=true)
+     * @ORM\Column(type="string", length=255)
      */
-    private $DPD;
+    private $Nazev;
 
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $Osobni_odber;
-
-    public function getId(): ?int
+    public function getNazev(): ?string
     {
-        return $this->id;
+        return $this->Nazev;
     }
 
-    public function getDPD(): ?string
+    public function setNazev(string $Nazev): self
     {
-        return $this->DPD;
-    }
-
-    public function setDPD(?string $DPD): self
-    {
-        $this->DPD = $DPD;
-
-        return $this;
-    }
-
-    public function getOsobniOdber(): ?string
-    {
-        return $this->Osobni_odber;
-    }
-
-    public function setOsobniOdber(?string $Osobni_odber): self
-    {
-        $this->Osobni_odber = $Osobni_odber;
+        $this->Nazev = $Nazev;
 
         return $this;
     }

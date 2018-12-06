@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\PlatbaRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ZemeRepository")
  */
-class Platba
+class Zeme
 {
     /**
      * @ORM\Id()
@@ -21,6 +21,11 @@ class Platba
      */
     private $Nazev;
 
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
     public function getNazev(): ?string
     {
         return $this->Nazev;
@@ -32,4 +37,5 @@ class Platba
 
         return $this;
     }
+
 }
