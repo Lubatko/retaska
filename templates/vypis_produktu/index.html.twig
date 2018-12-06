@@ -3,18 +3,26 @@
 {% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'src/Controller/VypisProduktuController.php'|file_link(0) }}">src/Controller/VypisProduktuController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'templates/vypis_produktu/index.html.twig'|file_link(0) }}">templates/vypis_produktu/index.html.twig</a></code></li>
-    </ul>
+<div class="container row">
+<ul class="list-group col-4">
+{% for kategorie in Kategories %}
+<li class="list-group-item d-flex justify-content-between align-items-center">
+{{kategorie.Nazev}}
+    <span class="badge badge-primary badge-pill">{{kategorie.products|length}}</span>
+  </li>
+{% endfor %}
+</ul>
+<div class="col-8 row">
+{% for product in products %}
+    <div class="card col-4 ">
+  <img class="card-img-top" src=".../100px180/" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{product.Nazev}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endfor %}
+  </div>
 </div>
 {% endblock %}

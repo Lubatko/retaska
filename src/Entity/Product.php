@@ -36,6 +36,12 @@ class Product
      */
     private $Skladem;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Kategorie", inversedBy="products")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $Kategorie;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +91,18 @@ class Product
     public function setSkladem(int $Skladem): self
     {
         $this->Skladem = $Skladem;
+
+        return $this;
+    }
+
+    public function getKategorie(): ?Kategorie
+    {
+        return $this->Kategorie;
+    }
+
+    public function setKategorie(?Kategorie $Kategorie): self
+    {
+        $this->Kategorie = $Kategorie;
 
         return $this;
     }
