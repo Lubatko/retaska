@@ -32,17 +32,17 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/homepage/index.html.twig">Home <span class="sr-only">Hlavní strana</span></a>
+            <a class="nav-link" href="{{ path('homepage') }}">Home <span class="sr-only">Hlavní strana</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/vypis_produktu/index.html.twig">Produkty</a>
+            <a class="nav-link" href="{{ path('vypis_produktu') }}">Produkty</a>
           </li>        
-            <a class="navbar-brand" href="http://node17.codenvy.io:57880//retaska/templates/contacts/index.html.twig">777888999</a>
+            <a class="navbar-brand" href="{{ path('homepage') }}">777888999</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>         
           <li class="nav-item">
-            <a class="nav-link" href="#">Košík</a>
+            <a class="nav-link" href="{{ path('homepage') }}">Košík</a>
           </li>
         </ul>
       </div>

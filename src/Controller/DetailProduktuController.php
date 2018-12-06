@@ -4,16 +4,17 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\Product;
+use Symfony\Component\HttpFoundation\Response;
 
 class DetailProduktuController extends AbstractController
 {
     /**
-     * @Route("/detail/produktu", name="detail_produktu")
+     * @Route("/detail_produktu/{id}", name="product_detail", methods="GET")
      */
-    public function index()
+    public function show(Product $product): Response
     {
-        return $this->render('detail_produktu/index.html.twig', [
-            'controller_name' => 'DetailProduktuController',
-        ]);
+        return $this->render('detail_produktu/index.html.twig', ['product' => $product]);
     }
+
 }
