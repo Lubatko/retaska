@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap 4</title>
+    <title>RE-taška</title>
 
     <!-- Bootstrap core CSS -->
 
@@ -23,27 +23,32 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #4ACC32;">
-      <a class="navbar-brand" href="#">RE-TAŠKA</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="//node17.codenvy.io:57880//retaska/templates/vypis_produktu/index.html.twig">RE-TAŠKA</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
+      
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="{{ path('homepage') }}">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/homepage/index.html.twig">Home <span class="sr-only">Hlavní strana</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="http://node17.codenvy.io:57880//lekce-1/about.html">About</a>
-          </li>
+            <a class="nav-link" href="/vypis_produktu/index.html.twig">Produkty</a>
+          </li>        
+            <a class="navbar-brand" href="http://node17.codenvy.io:57880//retaska/templates/contacts/index.html.twig">777888999</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>         
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="#">Košík</a>
           </li>
         </ul>
       </div>
     </nav>
 
+    
     <main role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -55,9 +60,9 @@
       </div> <!-- /container -->
 
     </main>
-
     <footer class="container">
       <p>&copy; Company 2017-2018</p>
     </footer>
   </body>
+  
 </html>

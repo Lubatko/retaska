@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class VypisProduktuController extends AbstractController
 {
     /**
-     * @Route("/vypis/produktu", name="vypis_produktu")
+     * @Route("/vypis_produktu", name="vypis_produktu")
      */
     public function index()
     {
