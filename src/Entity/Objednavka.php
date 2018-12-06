@@ -52,24 +52,26 @@ class Objednavka
     private $PSC;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Zeme")
+     * @ORM\JoinColumn(nullable=false)
      */
     private $Zeme;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $DOprava;
-
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $Platba;
-
+    
     /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $Poznamka;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Doprava")
+     */
+    private $Doprava;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Platba")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $Platba;
 
     public function getId(): ?int
     {
@@ -160,42 +162,6 @@ class Objednavka
         return $this;
     }
 
-    public function getZeme(): ?string
-    {
-        return $this->Zeme;
-    }
-
-    public function setZeme(string $Zeme): self
-    {
-        $this->Zeme = $Zeme;
-
-        return $this;
-    }
-
-    public function getDOprava(): ?string
-    {
-        return $this->DOprava;
-    }
-
-    public function setDOprava(string $DOprava): self
-    {
-        $this->DOprava = $DOprava;
-
-        return $this;
-    }
-
-    public function getPlatba(): ?string
-    {
-        return $this->Platba;
-    }
-
-    public function setPlatba(string $Platba): self
-    {
-        $this->Platba = $Platba;
-
-        return $this;
-    }
-
     public function getPoznamka(): ?string
     {
         return $this->Poznamka;
@@ -204,6 +170,42 @@ class Objednavka
     public function setPoznamka(?string $Poznamka): self
     {
         $this->Poznamka = $Poznamka;
+
+        return $this;
+    }
+
+    public function getZeme(): ?Zeme
+    {
+        return $this->Zeme;
+    }
+
+    public function setZeme(?Zeme $Zeme): self
+    {
+        $this->Zeme = $Zeme;
+
+        return $this;
+    }
+
+    public function getDoprava(): ?Doprava
+    {
+        return $this->Doprava;
+    }
+
+    public function setDoprava(?Doprava $Doprava): self
+    {
+        $this->Doprava = $Doprava;
+
+        return $this;
+    }
+
+    public function getPlatba(): ?Platba
+    {
+        return $this->Platba;
+    }
+
+    public function setPlatba(?Platba $Platba): self
+    {
+        $this->Platba = $Platba;
 
         return $this;
     }

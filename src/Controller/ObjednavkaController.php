@@ -25,7 +25,7 @@ class ObjednavkaController extends AbstractController
             $em->persist($objednavka);
             $em->flush();
 
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('dekovna');
         }
 
         return $this->render('objednavka/index.html.twig', [

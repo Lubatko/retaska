@@ -16,4 +16,15 @@ class HomepageController extends AbstractController
             'controller_name' => 'HomepageController',
         ]);
     }
+
+    /**
+     * @Route("/dekovna", name="dekovna")
+     */
+    public function dekovna()
+    {
+        return $this->render('homepage/dekovna.html.twig', [
+            'controller_name' => 'HomepageController',
+        ]);
+    }
 }
+
